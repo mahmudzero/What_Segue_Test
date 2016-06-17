@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Segues with Peek and Pop" minToolsVersion="7.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="What_Test" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,94 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GDb-ts-Ymg">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kOY-xV-5m8" userLabel="BlurSuperView">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Suq-g6-v6F" userLabel="BlurSubView">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JGq-co-Kwp">
+                                                    <rect key="frame" x="277" y="512" width="46" height="30"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <connections>
+                                                        <segue destination="Fid-ib-Azt" kind="presentation" modalTransitionStyle="coverVertical" id="MtM-kr-YvY">
+                                                            <segue key="commit" inheritsFrom="parent" id="lhC-Nw-PQh"/>
+                                                            <segue key="preview" inheritsFrom="commit" id="uGu-oL-dnU"/>
+                                                        </segue>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="JGq-co-Kwp" firstAttribute="centerX" secondItem="Suq-g6-v6F" secondAttribute="centerX" id="PM3-U1-63d"/>
+                                                <constraint firstAttribute="bottom" secondItem="JGq-co-Kwp" secondAttribute="bottom" constant="58" id="V0a-0U-vgp"/>
+                                            </constraints>
+                                        </view>
+                                        <blurEffect style="dark"/>
+                                    </visualEffectView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="kOY-xV-5m8" firstAttribute="height" secondItem="GDb-ts-Ymg" secondAttribute="height" id="0rg-fO-8oo"/>
+                                    <constraint firstItem="kOY-xV-5m8" firstAttribute="centerY" secondItem="GDb-ts-Ymg" secondAttribute="centerY" id="D7u-dO-4tz"/>
+                                    <constraint firstItem="kOY-xV-5m8" firstAttribute="width" secondItem="GDb-ts-Ymg" secondAttribute="width" id="XWa-B1-0Hw"/>
+                                    <constraint firstItem="kOY-xV-5m8" firstAttribute="centerX" secondItem="GDb-ts-Ymg" secondAttribute="centerX" id="jVt-BC-KeT"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="GDb-ts-Ymg" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="18y-Oe-TWu"/>
+                            <constraint firstItem="GDb-ts-Ymg" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="5b3-AK-Ouf"/>
+                            <constraint firstItem="GDb-ts-Ymg" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="XEs-oM-M18"/>
+                            <constraint firstItem="GDb-ts-Ymg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tES-Bw-SzU"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="CameraView" destination="GDb-ts-Ymg" id="AYh-Ha-m3h"/>
+                        <outlet property="SuperView" destination="8bC-Xf-vdC" id="ANM-ZC-jPx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="184" y="350"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="1N8-XO-JR9">
+            <objects>
+                <viewController id="Fid-ib-Azt" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CAh-GQ-LJS"/>
+                        <viewControllerLayoutGuide type="bottom" id="DEt-gA-vRq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6eX-cN-skb">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HwF-GO-pOQ">
+                                <rect key="frame" x="277" y="285" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" modalTransitionStyle="crossDissolve" id="LoE-d2-3jg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="HwF-GO-pOQ" firstAttribute="centerX" secondItem="6eX-cN-skb" secondAttribute="centerX" id="9Dx-bY-Vx5"/>
+                            <constraint firstItem="HwF-GO-pOQ" firstAttribute="centerY" secondItem="6eX-cN-skb" secondAttribute="centerY" id="E7N-7c-duW"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uwe-lQ-K4n" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="883" y="350"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="MtM-kr-YvY"/>
+    </inferredMetricsTieBreakers>
 </document>

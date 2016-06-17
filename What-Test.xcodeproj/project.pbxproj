@@ -14,6 +14,8 @@
 		F4D1F3CD1BB1C9BD00F1E7AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4D1F3CB1BB1C9BD00F1E7AF /* LaunchScreen.storyboard */; };
 		F4D1F3D81BB1C9BE00F1E7AF /* What_TestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D1F3D71BB1C9BE00F1E7AF /* What_TestTests.swift */; };
 		F4D1F3E31BB1C9BE00F1E7AF /* What_TestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D1F3E21BB1C9BE00F1E7AF /* What_TestUITests.swift */; };
+		F4D1F3F11BB1C9D600F1E7AF /* CameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D1F3F01BB1C9D600F1E7AF /* CameraController.swift */; settings = {ASSET_TAGS = (); }; };
+		F4D1F3F31BB1DF0700F1E7AF /* HorizontalSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D1F3F21BB1DF0700F1E7AF /* HorizontalSegue.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		F4D1F3DE1BB1C9BE00F1E7AF /* What-TestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "What-TestUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4D1F3E21BB1C9BE00F1E7AF /* What_TestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = What_TestUITests.swift; sourceTree = "<group>"; };
 		F4D1F3E41BB1C9BE00F1E7AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4D1F3F01BB1C9D600F1E7AF /* CameraController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraController.swift; sourceTree = "<group>"; };
+		F4D1F3F21BB1DF0700F1E7AF /* HorizontalSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HorizontalSegue.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,8 @@
 			children = (
 				F4D1F3C21BB1C9BD00F1E7AF /* AppDelegate.swift */,
 				F4D1F3C41BB1C9BD00F1E7AF /* ViewController.swift */,
+				F4D1F3F21BB1DF0700F1E7AF /* HorizontalSegue.swift */,
+				F4D1F3F01BB1C9D600F1E7AF /* CameraController.swift */,
 				F4D1F3C61BB1C9BD00F1E7AF /* Main.storyboard */,
 				F4D1F3C91BB1C9BD00F1E7AF /* Assets.xcassets */,
 				F4D1F3CB1BB1C9BD00F1E7AF /* LaunchScreen.storyboard */,
@@ -255,8 +261,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4D1F3F11BB1C9D600F1E7AF /* CameraController.swift in Sources */,
 				F4D1F3C51BB1C9BD00F1E7AF /* ViewController.swift in Sources */,
 				F4D1F3C31BB1C9BD00F1E7AF /* AppDelegate.swift in Sources */,
+				F4D1F3F31BB1DF0700F1E7AF /* HorizontalSegue.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,6 +410,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "MahmudAssamaray.What-Test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -413,6 +422,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "MahmudAssamaray.What-Test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
